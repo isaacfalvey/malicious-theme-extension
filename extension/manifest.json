@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "InconspicuousThemey",
+  "version": "0.1",
+
+  "description": "Changes the theme of your browser and nothing else",
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inconspicuousthemey.js"]
+    }
+  ]
+
+}
