@@ -3,18 +3,20 @@
   "manifest_version": 2,
   "name": "InconspicuousThemey",
   "version": "0.1",
-
   "description": "Changes the theme of your browser and nothing else",
-
   "icons": {
     "48": "icons/icon.png"
   },
+  "homepage_url": "https://github.com/isaacfalvey/malicious-theme-extension",
 
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["updatetheme.js"]
+  "theme": {
+    "colors": {
+        "frame": "#313e61",
+        "frame_inactive": "#774a62",
+        "tab_text": "#81abbc",
+        "toolbar": "#774a62",
+        "toolbar_text": "#fbd2c9"
     }
-  ]
+  }
 
 }
