@@ -24,4 +24,4 @@ if __name__ == "__main__":
     '''
     sets a randomly available port 
     '''
-    app.run(port=0)
+    app.run(port=50192)
