@@ -1,8 +1,11 @@
 from json import dumps
 from flask import Flask, request
 from logurl import log_url
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/', methods=['GET'])
 def inconspicuous():
@@ -16,7 +19,7 @@ def url():
     '''
     logs a url submitted to the server
     '''
-    url = request.get_json()['url']
+    url = request.get_json()['user_website']
     log_url(url)
     return dumps({'success': True})
 

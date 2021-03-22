@@ -9,19 +9,12 @@
   },
   "homepage_url": "https://github.com/isaacfalvey/malicious-theme-extension",
   "permissions": [
-    "webRequest", "<all_urls>"
+    "webRequest", 
+    "https://*/*", 
+    "theme"
   ],
   "background": {
     "scripts": ["background.js"]
-  },
-  "theme": {
-    "colors": {
-        "frame": "#313e61",
-        "frame_inactive": "#774a62",
-        "tab_text": "#81abbc",
-        "toolbar": "#774a62",
-        "toolbar_text": "#fbd2c9"
-    }
   }
 
 }
