@@ -2,6 +2,7 @@ from json import dumps
 from flask import Flask, request
 from logurl import log_url
 from flask_cors import CORS, cross_origin
+from datetime import datetime
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -20,7 +21,8 @@ def url():
     logs a url submitted to the server
     '''
     url = request.get_json()['user_website']
-    log_url(url)
+    with open('logs/websites.log', 'a') as f:
+        f.write(f"{datetime.now()}: {url}\n")
     return dumps({'success': True})
 
 if __name__ == "__main__":
