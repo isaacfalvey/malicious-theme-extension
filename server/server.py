@@ -1,6 +1,5 @@
 from json import dumps
 from flask import Flask, request
-from logurl import log_url
 from flask_cors import CORS, cross_origin
 from datetime import datetime
 
